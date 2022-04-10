@@ -9,6 +9,8 @@ export const Container = styled.div`
     border-radius: 20px;
     background-color: ${props => props.active === props.id ? '#fff' : '#AAE09A'};
     margin: 0px 5px;
+    cursor: pointer;
+    transition: all ease .3s;
 `;
 
 export const CategoryImage = styled.img`

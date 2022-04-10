@@ -8,10 +8,18 @@ export const Container = styled.section`
 export const CategoryArea = styled.article`
     color: #fff;
     margin-top: 20px;
-
+    
 `;
 
 export const CategoryList = styled.aside`
     display: flex;
     margin-top: 10px;
+`;
+
+export const ProductArea = styled.article`
+
+`;
+
+export const ProductList = styled.aside`
+    
 `;

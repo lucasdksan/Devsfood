@@ -3,7 +3,7 @@ import { useHistory, useLocation } from "react-router-dom";
 
 import { LinkArea, LinkIcon } from "./styles";
 
-const MenuItem = ({ icon, link })=>{
+const MenuItem = ({ icon, link, title })=>{
     const location = useLocation();
     const history = useHistory();
 
@@ -15,7 +15,13 @@ const MenuItem = ({ icon, link })=>{
     }
 
     return(
-        <LinkArea href={link} onClick={handleLinkClick} active={isActive}>
+        <LinkArea 
+            href={link} 
+            onClick={handleLinkClick} 
+            active={isActive}
+            data-tip={title}
+            data-for="tip-right"
+        >
             <LinkIcon src={icon}/>
         </LinkArea>
     );

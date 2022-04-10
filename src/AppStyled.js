@@ -19,5 +19,5 @@ export const PageBody = styled.section`
     flex: 1;
     background-color: #00980d;
     background-image: url(${bg});
-
+    overflow-y: hidden;
 `;

@@ -1,11 +1,36 @@
 import React from 'react';
 
-import { Container } from './styles';
+import {  Container, 
+          ProductButtonArea, 
+          ProductInfoArea, 
+          ProductPhoto, 
+          ProductPhotoArea, 
+          ProductName,
+          ProductIngredients,
+          ProductPrice,
+          ProductButton } from './styles';
 
-function ProductItem({ data }) {
+import nextIcon from '../../assets/next.png';
+
+function ProductItem({ data, onClick }) {
+
+  const handleClick = ()=>{
+    onClick(data);
+  }
+
   return (
-    <Container>
-      {data.name}
+    <Container onClick={handleClick}>
+      <ProductPhotoArea>
+        <ProductPhoto src={data.image}/>
+      </ProductPhotoArea>
+      <ProductInfoArea>
+        <ProductName>{data.name}</ProductName>
+        <ProductPrice>R$ {data.price}</ProductPrice>
+        <ProductIngredients>{data.ingredients}</ProductIngredients>
+      </ProductInfoArea>
+      <ProductButtonArea>
+        <ProductButton src={nextIcon}/>
+      </ProductButtonArea>
     </Container>
   );
 };

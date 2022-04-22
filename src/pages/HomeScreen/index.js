@@ -146,8 +146,14 @@ export default () => {
                     }
                 </ProductPaginationArea>
             }
-            <Modal status={modalStatus} setStatus={setModalStatus}>
-                <ModalProduct data={modalData}/>
+            <Modal 
+                status={modalStatus} 
+                setStatus={setModalStatus}
+            >
+                <ModalProduct 
+                    data={modalData} 
+                    setStatus={setModalStatus}
+                />
             </Modal>
         </Container>
     );
